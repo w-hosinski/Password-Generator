@@ -49,18 +49,17 @@ function validation(){
     document.getElementById("minUpperCase").checked = ""
     document.getElementById("minNumber").checked = ""
     document.getElementById("minSpecChar").checked = ""
-    const CHARSET = "!\"#$%&'()*+,-./:;<=>?@[]\\^_`{}|~"
     const INPUT = document.getElementById("input").value
     let minLength = /^.{8,}$/
     let maxLength = /^.{1,20}$/
     let minLower = /^(?=(?:.*?[a-z]){2})/
     let minUpper = /^(?=(?:.*?[A-Z]){2})/
     let minNumber = /^(?=(?:.*?\d){2})/
-    //let minSpecial = 1
+    let minSpecial = /[!\"#$%&'()*+,-./:;<=>?\[\]\\^_`{}|~]/
     if(minLength.test(INPUT)) document.getElementById("minLength").checked = "checked"
     if(maxLength.test(INPUT)) document.getElementById("maxLength").checked = "checked"
     if(minLower.test(INPUT)) document.getElementById("minLowerCase").checked = "checked"
     if(minUpper.test(INPUT)) document.getElementById("minUpperCase").checked = "checked"
     if(minNumber.test(INPUT)) document.getElementById("minNumber").checked = "checked"
-    //if(minSpecial.test(INPUT)) document.getElementById("minSpecChar").checked = "checked"
+    if(minSpecial.test(INPUT)) document.getElementById("minSpecChar").checked = "checked"
 }
