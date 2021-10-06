@@ -1,5 +1,25 @@
-
-
+#container {
+    font-size: 25px;
+    margin: 10% 0 0 40%;
+    padding: 1em;
+    background: lightgray;
+    width: 22.5%
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+input[type=text] {
+    font-size: 1em;
+}
+input[type=button] {
+    font-size: 0.8em;
+}
+input[type=number] {
+    font-size: 0.8em;
+}
 #length {
     width: 3em;
 }
