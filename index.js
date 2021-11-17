@@ -27,20 +27,20 @@ function generate() {
     document.getElementById("output").value = output 
 }
 function genLowerCase(){
-const CHARSET = "abcdefghijklmnopqrstuvwxyz"
-    output += CHARSET.charAt(Math.floor(Math.random() * 26))
+const charset = "abcdefghijklmnopqrstuvwxyz"
+    output += charset.charAt(Math.floor(Math.random() * 26))
 }
 function genUpperCase(){
-const CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    output += CHARSET.charAt(Math.floor(Math.random() * 26))
+const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    output += charset.charAt(Math.floor(Math.random() * 26))
 }
 function genNumber(){
-const CHARSET = "0123456789"
-    output += CHARSET.charAt(Math.floor(Math.random() * 10))
+const charset = "0123456789"
+    output += charset.charAt(Math.floor(Math.random() * 10))
 }
 function genSpecial(){
-const CHARSET = "!\"#$%&'()*+,-./:;<=>?@[]\\^_`{}|~";
-    output += CHARSET.charAt(Math.floor(Math.random() * 32))
+const charset = "!\"#$%&'()*+,-./:;<=>?@[]\\^_`{}|~";
+    output += charset.charAt(Math.floor(Math.random() * 32))
 }
 function validation(){
     document.getElementById("minLength").checked = ""
@@ -49,17 +49,17 @@ function validation(){
     document.getElementById("minUpperCase").checked = ""
     document.getElementById("minNumber").checked = ""
     document.getElementById("minSpecChar").checked = ""
-    const INPUT = document.getElementById("input").value
+    const input = document.getElementById("input").value
     let minLength = /^.{8,}$/
     let maxLength = /^.{1,20}$/
     let minLower = /^(?=(?:.*?[a-z]){2})/
     let minUpper = /^(?=(?:.*?[A-Z]){2})/
     let minNumber = /^(?=(?:.*?\d){2})/
     let minSpecial = /[!\"#$%&'()*+,-./:;<=>?\[\]\\^_`{}|~]/
-    if(minLength.test(INPUT)) document.getElementById("minLength").checked = "checked"
-    if(maxLength.test(INPUT)) document.getElementById("maxLength").checked = "checked"
-    if(minLower.test(INPUT)) document.getElementById("minLowerCase").checked = "checked"
-    if(minUpper.test(INPUT)) document.getElementById("minUpperCase").checked = "checked"
-    if(minNumber.test(INPUT)) document.getElementById("minNumber").checked = "checked"
-    if(minSpecial.test(INPUT)) document.getElementById("minSpecChar").checked = "checked"
+    if(minLength.test(input)) document.getElementById("minLength").checked = "checked"
+    if(maxLength.test(input)) document.getElementById("maxLength").checked = "checked"
+    if(minLower.test(input)) document.getElementById("minLowerCase").checked = "checked"
+    if(minUpper.test(input)) document.getElementById("minUpperCase").checked = "checked"
+    if(minNumber.test(input)) document.getElementById("minNumber").checked = "checked"
+    if(minSpecial.test(input)) document.getElementById("minSpecChar").checked = "checked"
 }

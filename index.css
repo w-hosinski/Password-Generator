@@ -1,9 +1,9 @@
 #container {
     font-size: 25px;
-    margin: 10% 0 0 40%;
+    margin: 14rem auto;
     padding: 1em;
     background: lightgray;
-    width: 22.5%
+    width: 24rem;
 }
 input[type=checkbox] {
     transform: scale(1.5);
